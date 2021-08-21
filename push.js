@@ -1,19 +1,28 @@
-var push = require('web-push');
+const webpush = require('web-push');
 
-// let vapidKey = push.generateVAPIDKeys();
+let vapidKey = webpush.generateVAPIDKeys();
 
-// console.log(vapidKey);
+console.log(vapidKey);
 
-let vapidKeys = {
-    publicKey: 'BGteWm_PDDXbsk__NfxG8PGnADqy5h0oV5XIJLGZPXYtkkIrW6PY85zd2uO_BMFn00H5skg3q24xCHAn8cUjy3U',
-    privateKey: 'AqW0L5w-5usyfDIKe50qfuFu1DGPMkuUgxErwk__wkw'
-}
-
-push.setVapidDetails('mailto:developer@yethiha.com', vapidKeys.publicKey, vapidKeys.privateKey);
-
-let sub = {
-    "endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…twZcUDrlWce0rwPO0GdUYGgk__jPwm52Nt5Z56hN4XDPxsWPBXQtUyyWyNrg",
-    "keys":{"auth":"0Z_gRf0LYvVsvXIZsz5xBQ","p256dh":"BLuc0OjcOjiwpfW3KTfnQNyK1YiWgK7An83EmuaVNlHUNd4f_XZq60gNf-xiTbJM2qzbruqO1Ma5aK15tDzz1fk"}
+// {
+//     publicKey: 'BGOjPDin5Or-algPlHo7cYXUW7kmGN0O2QNsycZGiZq_6w-pip27lEflS4Y3PfNzn3_mvPqBGbT62qsT0ifd8Fw',
+//     privateKey: 'E4hOBygmigf6AEo8Dn0vq6nFhPiUZC9maHEdKzCDKJY'
+// }
+const vapidKeys = {
+    publicKey: 'BGOjPDin5Or-algPlHo7cYXUW7kmGN0O2QNsycZGiZq_6w-pip27lEflS4Y3PfNzn3_mvPqBGbT62qsT0ifd8Fw',
+    privateKey: 'E4hOBygmigf6AEo8Dn0vq6nFhPiUZC9maHEdKzCDKJY'
 };
 
-push.sendNotification(sub, 'test message')
+
+
+webpush.setVapidDetails(
+    'mailto:example@yourdomain.org',
+    vapidKeys.publicKey,
+    vapidKeys.privateKey
+);
+
+
+
+let pushSubscription = {"endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…twZcUDrlWce0rwPO0GdUYGgk__jPwm52Nt5Z56hN4XDPxsWPBXQtUyyWyNrg","keys":{"auth":"0Z_gRf0LYvVsvXIZsz5xBQ","p256dh":"BLuc0OjcOjiwpfW3KTfnQNyK1YiWgK7An83EmuaVNlHUNd4f_XZq60gNf-xiTbJM2qzbruqO1Ma5aK15tDzz1fk"}}
+
+// webpush.sendNotification(pushSubscription, 'test message');
