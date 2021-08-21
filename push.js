@@ -33,9 +33,12 @@ webpush.setVapidDetails(
     vapidKeys.publicKey,
     vapidKeys.privateKey
  );
+//  "endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…1uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4","keys":{"auth":"lO8Mu-CEolRSnQ5Bs7O1xw","p256dh":"BH1dXJC6GcHtQpN5cysCxYjF2eVPid_qn1jEKr3-0O7KysIL6gfBRfqB9fZqj6-VJ4qksSFXkuqTPh_g0Q-9ms"
 
+
+// {"endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…1uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4","keys":{"auth":"lO8Mu-CEolRSnQ5Bs7O1xw","p256dh":"BH1dXJC6GcHtQpN5cysCxYjF2eVPid_qn1jEKr3-0O7KysIL6gfBRfqB9fZqj6-VJ4qksSFXkuxqTPh_g0Q-9ms"}}
 let pushSubscription = {
-    endpoint:'https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…1uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4',
+    endpoint:'https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhIUV85LoZkQ5m-fYSR1XnQN49Wehx6dvQSEB_sRyIF-uP2ZWZKWbD7H3zyIxca4R81pNF0Lbc9hLQRl305Wn78JI_vfWCDCJxQ5bjsMk-Fe-EMIiwK_81uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4',
     keys: {
         auth: 'lO8Mu-CEolRSnQ5Bs7O1xw',
         p256dh: 'BH1dXJC6GcHtQpN5cysCxYjF2eVPid_qn1jEKr3-0O7KysIL6gfBRfqB9fZqj6-VJ4qksSFXkuxqTPh_g0Q-9ms'
