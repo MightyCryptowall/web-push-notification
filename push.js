@@ -1,8 +1,8 @@
 const webpush = require('web-push');
 
-let vapidKey = webpush.generateVAPIDKeys();
+// let vapidKey = webpush.generateVAPIDKeys();
 
-console.log(vapidKey);
+// console.log(vapidKey);
 
 // {
 //     publicKey: 'BGOjPDin5Or-algPlHo7cYXUW7kmGN0O2QNsycZGiZq_6w-pip27lEflS4Y3PfNzn3_mvPqBGbT62qsT0ifd8Fw',
@@ -15,14 +15,31 @@ const vapidKeys = {
 
 
 
+
+
+const options = {
+    //gcmAPIKey: 'NOT IN USE',
+    TTL: 60,
+    vapidDetails: {
+        subject: 'mailto: myemail@gmail.com',
+        publicKey:  vapidKeys.publicKey,
+        privateKey: vapidKeys.privateKey
+      },
+      contentEncoding: 'aes128gcm'
+  };
+
 webpush.setVapidDetails(
     'mailto:example@yourdomain.org',
     vapidKeys.publicKey,
     vapidKeys.privateKey
-);
+ );
 
+let pushSubscription = {
+    endpoint:'https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…1uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4',
+    keys: {
+        auth: 'lO8Mu-CEolRSnQ5Bs7O1xw',
+        p256dh: 'BH1dXJC6GcHtQpN5cysCxYjF2eVPid_qn1jEKr3-0O7KysIL6gfBRfqB9fZqj6-VJ4qksSFXkuxqTPh_g0Q-9ms'
+      }
+};
 
-
-let pushSubscription = {"endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…twZcUDrlWce0rwPO0GdUYGgk__jPwm52Nt5Z56hN4XDPxsWPBXQtUyyWyNrg","keys":{"auth":"0Z_gRf0LYvVsvXIZsz5xBQ","p256dh":"BLuc0OjcOjiwpfW3KTfnQNyK1YiWgK7An83EmuaVNlHUNd4f_XZq60gNf-xiTbJM2qzbruqO1Ma5aK15tDzz1fk"}}
-
-// webpush.sendNotification(pushSubscription, 'test message');
+webpush.sendNotification(pushSubscription, 'test message').catch(err => console.log(err));
