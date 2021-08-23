@@ -38,11 +38,11 @@ webpush.setVapidDetails(
 
 // {"endpoint":"https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhI…1uYot8z4RwyFToaKpdCQpcyL-Yv3I1nZTCIIrdDc5mmv7xRt8U1wpc8PM2c4","keys":{"auth":"lO8Mu-CEolRSnQ5Bs7O1xw","p256dh":"BH1dXJC6GcHtQpN5cysCxYjF2eVPid_qn1jEKr3-0O7KysIL6gfBRfqB9fZqj6-VJ4qksSFXkuxqTPh_g0Q-9ms"}}
 let pushSubscription = {
-    endpoint:'https://fcm.googleapis.com/fcm/send/dLR_ev592mQ:APA91bG24B0oDz_kDysbr439unH0Pl9yAhLOgrg5nYt8TSBOfhkWlHPus0W6oqunsiZPvOecf_1_4GZNbqH4dfMikEkC6PLxPpbTlOp4zw_0NTSp45FpL8SSbEdUjifgDovnlMlKLsx8',
-    "expirationTime":null,
+    endpoint:'https://updates.push.services.mozilla.com/wpush/v2/gAAAAABhIU4ftw0C52SuTPDt2OUSP7I1HscDlFNFQ7n1mtdnqdTABR6gAhJWi0Mz0mHgtdO-70Z_lfrNu_9wyIF8o8xTJlIA4wiPNMcm8Xt8PgGNVAWMk3aYlyG0ZvgjIz3fh9O50KVpeAcv-sOE8p-iIGg8rF-TeUqlrj7EMBf3aiJLvS8Fue4',
+    expirationTime:null,
     keys: {
-        auth: 'sO713e6_UTIcq-LSXitH2g',
-        p256dh: 'BLx8iHG84cqzsUxSfKucN6uAUUoVo8NnKsJ_bJBnbsR2x0lnx-p2ahm3xhBmIBv3juTRN8D2SHXptD1sEzrfHqU'
+        auth: '6Lmi_8VeGS8G0XthbVqZkg',
+        p256dh: 'BG9sGktbuGzU2bssWKC3eGbInCUKJEZ2nBIAEfIXBq0nU1XOy_YSftyoKnqwAcEwIob43OciKdinAKCLzDRBh2w'
       }
 };
 
