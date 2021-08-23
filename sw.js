@@ -20,7 +20,7 @@ self.addEventListener('push', function(e) {
     };
     console.log(e.payload);
     e.waitUntil(
-      self.registration.showNotification(e.payload, options)
+      self.registration.showNotification(e.data.text(), options)
     );
   });
   
